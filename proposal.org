@@ -23,6 +23,9 @@
    - the programming language <<<Python>>> :: The programming language Python is simple and readable enough that scientists with a weak programming background might be able to edit the code of the application to activate or desactivate any feature they are interested in.
    - mobile platforms :: Smart devices seem the platform of choice for small pedagogical applications that people use on their spare time, such as while waiting for the bus or an appointment.
 
+* RELATED PROJECTS
+  - The project [[https://github.com/jyby/TapLearn/wiki][TapLearn]] is a previous attempt to such a project, based on the Python library PyGame.
+  - The project [[https://github.com/ankidroid/Anki-Android][Anki-Android]] is a client optimizing spaced-retrieval based learning, developped using the python library Kivy. It might prove usefull in the future as a base for development, in particular for its interaction with the database of flashcards available at http://ankisrs.net/.
 * NOTES
 ** Gamification
    The term <<<gamification>>> refers to the act of rendering a common task more atractive by incoporating in it elements from games, such as scores and social ranking.
