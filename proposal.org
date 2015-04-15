@@ -1,0 +1,124 @@
+#+TITLE: Psycho Informatics: Proposal
+#+DESCRIPTION: Templates and Example of Pedagogical Games for testing various psychological theories about learning.
+#+AUTHOR: Jérémy Barbay
+#+EMAIL: jeremy@barbay.cl
+#+CATEGORY: 
+
+* Abstract
+
+  The aim of the <<<Psycho Informatic>>> project is to produce generic examples of pedagogical applications for mobile devices, to be used to study the effect of various features on both persistence and learning. 
+
+
+* Introduction 
+** Motivations 
+  
+   Video games can be "addictive", or at the very least they can motivate users to spend a large amount of time performing repetitive tasks in front of their device.  Some video games are pedagogical, but those are usually not considered as addictive. The gamification of learning addictivities has performed better in this direction, but never to the point where such a "game" has been called "addictive". Is there a trade-off between motivation and pedagogy in the design of video-games, or is it possible to design applications which are at once pedagogical and motivating? And in both cases, what are the mechanisms which maximize learning and motivation?
+
+   We propose to develop simple generic pedagogical games for memorization tasks, such that students in computer science can design their own variants and test the effect of their variants on the learning and motivation of users. This pedagogical game is developped in Python, a language taught in the first undergradute year, so that students can test their variants and evaluate their effect by having their family and friends installing and playing it on their own phones.
+
+
+** Technical Choices
+
+   We chose to use 
+   - the programming language <<<Python>>> :: The programming language Python is simple and readable enough that scientists with a weak programming background might be able to edit the code of the application to activate or desactivate any feature they are interested in.
+   - mobile platforms :: Smart devices seem the platform of choice for small pedagogical applications that people use on their spare time, such as while waiting for the bus or an appointment.
+
+* NOTES
+** Gamification
+   The term <<<gamification>>> refers to the act of rendering a common task more atractive by incoporating in it elements from games, such as scores and social ranking.
+
+Some pedagogical applications based on Spaced retrieval features important gamification aspects:
+- In DuoLingo (2012), the learner is encouraged to exercise 
+  1. daily by displaying a streak and earning bonus points on streaks which length is a multiple of 5,
+  2. for a minimum amount each day, week and month, by displaying the corresponding social rankings among the duolingo contacts of the learner.
+- In [[http://forum.koohii.com/viewtopic.php?id=6763][AnkiWarrior]] (2010) and its successor [[http://forum.koohii.com/viewtopic.php?pid=172878][AnkiEmperor]] (2012), the learner earns points by reviewing flashcards, which can be used to buy elements in a small management game.
+
+** Spaced Retrieval
+
+   <<<Spaced Retrieval>>> [[http://en.wikipedia.org/wiki/Spaced_retrieval][Wikipedia]] is the theory that memory retention can be improved via spaced exposition to the material to be memorized.  The game SuperMemo made it popular, and it was later adopted by games such as DuoLingo and Anki.
+
+*** Choosing delay between expositions
+
+The article "Spaced Retrieval: Absolute Spacing Enhances Learning Regardless of Relative Spacing" by Jeffrey D. Karpicke and Althea Bauernschmidt, from 2011, compares the learning outcomes of variable and fixed interval for Space Retrieval. They conclude that there is not meaningful statistical difference of outcome between both, but their result do not seem very conclusive, and their experiments are on a small sample. An application such as TapLearn would allow to replicate their experiment on a much larger scale, and which much more parameters.
+
+*** COMMENT Choosing material to be reviewed
+
+According to a [[http://stackoverflow.com/questions/10865535/best-way-to-modify-and-generalize-spaced-repetition-software ][stack overflow post]], the article "Improving students' long-term knowledge retention through personalized review" by Lindsey, Shroyer, Pashler, and Mozer describesa machine learning algorithm that, given a set of students' timestamped correct and incorrect responses to a list of questions, estimates the probability of correct response for each (student, question)-pair.  At any given time, such an algorithm could tell you the question most at risk of being forgotten (lowest probability of correct response). Even more than that, it gives a sorted list of questions in decreasing risk of forgetting. And yet even more than this, it'll give you a number between 0 and 1 indicating the risk of forgetting, so that you can set a threshold like "Don't ask me questions for which the probability of forgetting is less than 5%".
+
+** Pedagogical Applications
+*** <<<TapMath>>>
+
+ TapMath is a game on the Android Market which permits to practice simple computation such as additions, substractions and multiplications between numbers from 0 to 12.  It was programmed by Nicolas Lehovetzki.  An operation scrolls down from the top of the screen, with two potential answers waiting at the bottom of the screen.  One must choose the right answer before the block reaches the bottom of the screen. Given a correct answer, the question rises sligthly, buying out more time.  Given an incorrect answer, the game ends and the score is displayed.  An extra menu shows the 5 best scores, and display the best scores among Google+ contacts and globally, for time period ranging from today to forever.
+
+It is available for [[https://play.google.com/store/apps/details?id=fr.lehovetzki.tapmath&hl=en][Android]] and [[https://itunes.apple.com/fr/app/tap-math-jeux-calcul-rapide/id820464618?mt=8][iPhone]] devices. On Android, one can compare one's global ranking with Google Play games services.  Dixit its author, it is "More fun than traditional math flash cards, kids love it and enjoy learning mathematics."  This app is free and designed for smartphones and tablets.
+
+At the time of this writing [2015-02-25 Wed], the last update was on [2014-12-09 Tue], with 10,000 - 50,000 installs and 305 reports, where positive comments frequently mentions its "addictive" property, and where negative comments are uninformative. Its average note is 4.1 with the following distribution:
+| ***** | 176 |
+| ****  |  56 |
+| ***   |  28 |
+| **    |  16 |
+| *     |  29 |
+
+The following screenshots summarize the look and feel of the application:
+[[ScreenShots/TapMath/initScreen.png]]
+[[ScreenShots/TapMath/score0.png]]
+[[ScreenShots/TapMath/score14.png]]
+[[ScreenShots/TapMath/gameOver.png]]
+
+*** <<<SuperMemo>>>
+
+[[http://en.wikipedia.org/wiki/SuperMemo][SuperMemo]] is a learning method and software package developed by SuperMemo World and SuperMemo R&D with Piotr Woźniak. Based on self-experimentation, Woźniak wrote the first version of the algorithm in December 1987 and has suggested since then a sequence of algorithms for identifying both which items to review and when to review them: the current version of SuperMemo uses the 15th version of this algorithm, SM-15.
+
+One of the most widely implemented algorithms is [[http://www.supermemo.com/english/ol/sm2.htm][SuperMemo 2]], due to complications of the algorithms starting with the 3rd version, SM-3: dixit [[http://en.wikipedia.org/wiki/SuperMemo][Wikipedia]], "The SM-2 algorithm uses the performance on a card to schedule only that card, while SM-3 and newer algorithms use card performance to schedule that card and similar cards. The additional optimizations sometimes yield perverse results – answering "hard" on a card may yield an interval longer than answering "easy" on a card – and are criticized as reducing the robustness of the algorithm, making it more sensitive to variations – non-uniform difficulty of cards (a problem in versions 4 to 6, according to Wozniak), inconsistencies in studying, and so forth.[9] Wozniak disagreed with the criticism, but noted that in practice the other factors affecting study make it not very important."
+*** <<<Anki>>>
+
+[[http://en.wikipedia.org/wiki/Anki_%28software%29][Anki]] is a spaced retrieval flashcard program. Anki (暗記) is the Japanese word for memorization.  It can be considered as a free variant of SuperMemo, one of the main differences (aside from the price) being the availability of decks of flashcards, when SuperMemo rather recommends that each leaner constitute one's own deck of flashcards.  Dixit Wikipedia, "The cards are presented using HTML and may include text, images, sounds, videos, and LaTeX equations. The decks of cards, along with the user's statistics, are stored in the open SQLite format.". Dixit users, the flashcards of the decks on [[https://ankiweb.net/][AnkiWeb]] cannot be trusted too much as they often contains mistakes.
+
+While originally available only as a website, it is now available on Android devices as [[https://play.google.com/store/apps/details?id=com.ichi2.anki&hl=en][AnkiDroid]], with many advanced features
+  - support for flashcard content as text, images, sounds and LaTeX;
+  - spaced repetition (supermemo 2 algorithm);
+  - text-to-speech integration;
+  - more than 6000 premade decks;
+  - progress widget;
+  - detailed statistics;
+  - syncing with AnkiWeb; and
+  - open source.
+
+At the time of this writing [2015-02-26 Thu], the last update was on [2015-01-28 Wed], with  1,000,000 - 5,000,000 installs and 17,742 reports, where both positive and negative comments frequently mention the high number of options of the applications. Its average note is 4.5, with the following distribution:
+| ***** | 12,623 |
+| ****  |  2,824 |
+| ***   |    941 |
+| **    |    475 |
+| *     |    874 |
+
+
+
+It might be interesting to import the flashcard decks publically available for Anki into TapLearn, so that
+1. TapLearn presents a "gamified" version of Anki,
+2. the central server of TapLearn can suggest corrections on the decks from Anki based on the learner interactions with the cards.
+
+**** <<<AnkiDroid>>>
+    https://code.google.com/p/ankidroid/wiki/Contribution
+
+*** <<<DuoLingo>>> 
+
+
+
+*** <<<Tux4kids>>>: from <<<TuxMath>>> to <<<TuxType>>>
+
+[[http://tux4kids.alioth.debian.org/][Tux4Kids]] is a serie of open source pedagogical games for children.
+
+- TuxMath aims to teach arithmetic skills while  defending penguins from incoming comets.
+- [[http://tux4kids.alioth.debian.org/tuxtyping.php][TuxTyping]] aims to teach how to type on a keyboard, also while defending penguins from incoming comets.
+
+
+** Programming Tools
+*** <<<Python>>>
+*** <<<PyGame>>>
+
+    [[http://pygame.org/][PyGame]] is a set of Python modules designed for writing games and multimedia programs, on top of the excellent SDL library. It is highly portable and runs on nearly every platform and operating system.  Pygame is free. Released under the GPL License, one can create open source, free, freeware, shareware, and commercial games with it. 
+
+*** <<<PyGame/Android>>>
+
+**** SETUP PyGame/Android
+     You can find more detailed instructions to set-up PyGame for Android on the page http://pygame.renpy.org/android-packaging.html. 

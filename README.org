@@ -1,0 +1,9 @@
+#+TITLE: Psycho Informatics
+#+DESCRIPTION: Templates and Example of Pedagogical Games for testing various psychological theories about learning.
+#+AUTHOR: Jérémy Barbay
+#+EMAIL: jeremy@barbay.cl
+#+CATEGORY: 
+
+  The aim of the <<<Psycho Informatic>>> project is to produce generic examples of pedagogical applications for mobile devices, to be used to study the effect of various features on both persistence and learning. 
+
+For more information, see the file:proposal.org.
