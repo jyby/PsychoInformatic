@@ -1,0 +1,7 @@
+#+TITLE: LaRaNa
+#+DESCRIPTION: Prototype of pedagogical game to teach multiplication tables.
+#+AUTHOR: Jérémy Barbay
+#+EMAIL: jeremy@barbay.cl
+#+CATEGORY: Pedagogy
+
+

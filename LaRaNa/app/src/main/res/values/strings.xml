@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">LaRaNa*</string>
-
-    <string name="hello_world">Hello world!</string>
+    <string name="short_description">Learn Multiplications tables with LaRaNa!</string>
     <string name="action_settings">Settings</string>
+    <string name="example_of_question">4*5 ? 45</string>
+    <string name="button_validate">True</string>
+    <string name="button_reject">False</string>
+    <string name="button_flag">Flag</string>
+    <string name="button_joker">Joker</string>
 </resources>
