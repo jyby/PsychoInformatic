@@ -4,14 +4,55 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.widget.Button;
+import android.view.View;
+import android.widget.TextView;
 
 public class Game extends ActionBarActivity {
+
+    float y_coordinate = 0;
+    float y_coordinate_increment = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        Button button_joker = (Button) findViewById(R.id.button_joker);
+        Button button_validate = (Button) findViewById(R.id.button_validate);
+        Button button_reject = (Button) findViewById(R.id.button_reject);
+        Button button_flag = (Button) findViewById(R.id.button_flag);
+        final TextView sideA = (TextView) findViewById(R.id.flashcard_side_A);
+        final TextView sideB = (TextView) findViewById(R.id.flashcard_side_B);
+        sideA.setY(y_coordinate);
+        sideB.setY(y_coordinate);
+
+        button_joker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                y_coordinate += y_coordinate_increment;
+                sideA.setY(y_coordinate);
+            }
+        });
+        button_reject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sideA.setText("0");
+            }
+        });
+        button_validate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sideA.setText("0");
+            }
+        });
+        button_flag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sideA.setText("0");
+            }
+        });
+
     }
 
     @Override
