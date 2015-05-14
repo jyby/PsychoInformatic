@@ -1,5 +1,6 @@
 package cl.lejyby.larana;
 
+import java.util.Random;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,8 +11,9 @@ import android.widget.TextView;
 
 public class Game extends ActionBarActivity {
 
-    Deck deck;
-    Question question;
+//    Deck deck;
+//    Question question;
+    public final Random rand = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +27,14 @@ public class Game extends ActionBarActivity {
         final TextView sideA = (TextView) findViewById(R.id.flashcard_side_A);
         final TextView sideB = (TextView) findViewById(R.id.flashcard_side_B);
 
-        this.deck = new Deck();
-//        question = deck.pickAQuestion();
-//        sideA.setText(question.getLeft());
-//        sideB.setText(question.getRight());
+//        this.deck = new Deck();
+
+        int x = rand.nextInt(10);
+        int y = rand.nextInt(10);
+        String faceLeft = Integer.toString(x)+"*"+Integer.toString(y);
+        String faceRight = Integer.toString(x*y);
+        sideA.setText(faceLeft);
+        sideB.setText(faceRight);
 
         button_joker.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +42,12 @@ public class Game extends ActionBarActivity {
 //                question = deck.pickAQuestion();
 //                sideA.setText(question.getLeft());
 //                sideB.setText(question.getRight());
+                int x = rand.nextInt(10);
+                int y = rand.nextInt(10);
+                String faceLeft = Integer.toString(x)+"*"+Integer.toString(y);
+                String faceRight = Integer.toString(x*y);
+                sideA.setText(faceLeft);
+                sideB.setText(faceRight);
             }
         });
         button_reject.setOnClickListener(new View.OnClickListener() {
