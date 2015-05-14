@@ -10,50 +10,61 @@ import android.widget.TextView;
 
 public class Game extends ActionBarActivity {
 
-    float y_coordinate = 0;
-    float y_coordinate_increment = 10;
+    Deck deck;
+    Question question;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        Button button_joker = (Button) findViewById(R.id.button_joker);
-        Button button_validate = (Button) findViewById(R.id.button_validate);
-        Button button_reject = (Button) findViewById(R.id.button_reject);
-        Button button_flag = (Button) findViewById(R.id.button_flag);
+        final Button button_joker = (Button) findViewById(R.id.button_joker);
+        final Button button_validate = (Button) findViewById(R.id.button_validate);
+        final Button button_reject = (Button) findViewById(R.id.button_reject);
+        final Button button_flag = (Button) findViewById(R.id.button_flag);
         final TextView sideA = (TextView) findViewById(R.id.flashcard_side_A);
         final TextView sideB = (TextView) findViewById(R.id.flashcard_side_B);
-        sideA.setY(y_coordinate);
-        sideB.setY(y_coordinate);
+
+        this.deck = new Deck();
+//        question = deck.pickAQuestion();
+//        sideA.setText(question.getLeft());
+//        sideB.setText(question.getRight());
 
         button_joker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                y_coordinate += y_coordinate_increment;
-                sideA.setY(y_coordinate);
+//                question = deck.pickAQuestion();
+//                sideA.setText(question.getLeft());
+//                sideB.setText(question.getRight());
             }
         });
         button_reject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sideA.setText("0");
-            }
+//                question = deck.pickAQuestion();
+//                sideA.setText(question.getLeft());
+//                sideB.setText(question.getRight());
+          }
         });
         button_validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sideA.setText("0");
+//                question = deck.pickAQuestion();
+//                sideA.setText(question.getLeft());
+//                sideB.setText(question.getRight());
             }
         });
         button_flag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sideA.setText("0");
+//                question = deck.pickAQuestion();
+//                sideA.setText(question.getLeft());
+//                sideB.setText(question.getRight());
             }
         });
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

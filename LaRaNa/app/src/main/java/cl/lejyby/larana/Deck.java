@@ -1,7 +1,8 @@
 package cl.lejyby.larana;
 import java.util.Random;
 
-/**
+/** Deck class
+ * Set of Flashcards, for now generated at random.
  * Created by jbarbay on 11/05/15.
  */
 public class Deck {
@@ -21,7 +22,6 @@ public class Deck {
         }
     }
 
-
     FlashCard pickAFlashCard() {
         if (flashCard.length > 0) {
             int index = rand.nextInt(flashCard.length);
@@ -30,10 +30,15 @@ public class Deck {
             return null;
     }
 
+    Question pickAQuestion() {
+        FlashCard left = this.pickAFlashCard();
+        FlashCard right = this.pickAFlashCard();
+        return new Question(left,right);
+    }
+
     boolean match(String faceLeft, String faceRight) {
         // Check if there is a line of the database containing face1 and face2
-        for (int i = 0; i < flashCard.length; i++) {
-            FlashCard card = flashCard[i];
+        for(FlashCard  card : flashCard) {
             String face0 = card.getFace(0);
             String face1 = card.getFace(1);
             if ((face1.matches(faceLeft) && face0.matches(faceRight)) ||
@@ -41,5 +46,9 @@ public class Deck {
                 return true;
         }
         return false;
+    }
+
+    boolean match(Question question) {
+        return this.match(question.getLeft(),question.getRight());
     }
 }
