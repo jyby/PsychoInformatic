@@ -7,38 +7,37 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Game"
-    android:textAlignment="center">
+    android:id="@+id/mainFlashCardDisplay">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="259dp"
+        android:text="@string/example_of_flashcard_side_A"
+        android:textSize="45sp"
+        android:id="@+id/flashcard_side_A"
+        android:background="@color/accent_material_dark"
+        android:layout_above="@+id/gridLayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/gridLayout">
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="@string/example_of_flashcard_side_A"
-            android:textSize="45sp"
-            android:id="@+id/flashcard_side_A"
-            android:layout_row="0"
-            android:layout_column="0"
-            style="@style/Base.TextAppearance.AppCompat.Button"
-            android:background="@color/accent_material_dark" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:text="@string/example_of_flashcard_side_B"
-            android:textSize="45sp"
-            android:id="@+id/flashcard_side_B"
-            android:layout_row="0"
-            android:layout_column="20"
-            style="@style/Widget.AppCompat.TextView.SpinnerItem"
-            android:background="@color/accent_material_light" />
-    </GridLayout>
+    <TextView
+        android:layout_width="145dp"
+        android:layout_height="267dp"
+        android:text="@string/example_of_flashcard_side_B"
+        android:textSize="45sp"
+        android:id="@+id/flashcard_side_B"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:background="@color/accent_material_light"
+        android:layout_above="@+id/gridLayout"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:textAlignment="center" />
 
     <GridLayout
         android:layout_width="wrap_content"
