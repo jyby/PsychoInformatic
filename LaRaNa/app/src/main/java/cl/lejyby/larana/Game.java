@@ -15,11 +15,22 @@ public class Game extends ActionBarActivity {
 
 //    Deck deck;
     Question question;
+    int counter_true_negative;
+    int counter_true_positive;
+    int counter_false_negative;
+    int counter_false_positive;
+
     public final Random rand = new Random();
 
     final void displayCards(Question question, TextView sideA, TextView sideB ) {
         sideA.setText(question.getLeft());
         sideB.setText(question.getRight());
+    }
+    final void displayScore(TextView tn, TextView tp, TextView fn, TextView fp) {
+        tn.setText(Integer.toString(counter_true_negative));
+        tp.setText(Integer.toString(counter_true_positive));
+        fn.setText(Integer.toString(counter_false_negative));
+        fp.setText(Integer.toString(counter_false_positive));
     }
 
     @Override
@@ -33,6 +44,10 @@ public class Game extends ActionBarActivity {
         final Button button_flag = (Button) findViewById(R.id.button_flag);
         final TextView sideA = (TextView) findViewById(R.id.flashcard_side_A);
         final TextView sideB = (TextView) findViewById(R.id.flashcard_side_B);
+        final TextView textCounterTrueNegative = (TextView) findViewById(R.id.counterTrueNegative);
+        final TextView textCounterTruePositive = (TextView) findViewById(R.id.counterTruePositive);
+        final TextView textCounterFalseNegative = (TextView) findViewById(R.id.counterFalseNegative);
+        final TextView textCounterFalsePositive = (TextView) findViewById(R.id.counterFalsePositive);
 
 //        this.deck = new Deck();
         question = new Question();
@@ -49,12 +64,23 @@ public class Game extends ActionBarActivity {
         button_reject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(question.expectedCorrectness)
+                    counter_false_negative++;
+                else
+                    counter_true_negative++;
+                displayScore(textCounterTrueNegative,textCounterTruePositive,textCounterFalseNegative,textCounterFalsePositive);
                 question = new Question();
-          }
+                displayCards(question,sideA,sideB);
+            }
         });
         button_validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!question.expectedCorrectness)
+                    counter_false_positive++;
+                else
+                    counter_true_positive++;
+                displayScore(textCounterTrueNegative,textCounterTruePositive,textCounterFalseNegative,textCounterFalsePositive);
                 question = new Question();
                 displayCards(question,sideA,sideB);
             }
