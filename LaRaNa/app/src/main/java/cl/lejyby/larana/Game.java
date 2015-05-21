@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class Game extends ActionBarActivity {
 
 //    Deck deck;
-//    Question question;
+    Question question;
     public final Random rand = new Random();
 
     @Override
@@ -28,50 +28,39 @@ public class Game extends ActionBarActivity {
         final TextView sideB = (TextView) findViewById(R.id.flashcard_side_B);
 
 //        this.deck = new Deck();
-
-        int x = rand.nextInt(10);
-        int y = rand.nextInt(10);
-        String faceLeft = Integer.toString(x)+"*"+Integer.toString(y);
-        String faceRight = Integer.toString(x*y);
-        sideA.setText(faceLeft);
-        sideB.setText(faceRight);
+        question = new Question();
 
         button_joker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                question = deck.pickAQuestion();
-//                sideA.setText(question.getLeft());
-//                sideB.setText(question.getRight());
-                int x = rand.nextInt(10);
-                int y = rand.nextInt(10);
-                String faceLeft = Integer.toString(x)+"*"+Integer.toString(y);
-                String faceRight = Integer.toString(x*y);
-                sideA.setText(faceLeft);
-                sideB.setText(faceRight);
+                question = new Question();
+                sideA.setText(question.getLeft());
+                sideB.setText(question.getRight());
             }
         });
         button_reject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                question = deck.pickAQuestion();
-//                sideA.setText(question.getLeft());
-//                sideB.setText(question.getRight());
+                question = new Question();
+                sideA.setText(question.getLeft());
+                sideB.setText(question.getRight());
           }
         });
         button_validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                question = deck.pickAQuestion();
-//                sideA.setText(question.getLeft());
-//                sideB.setText(question.getRight());
+                question = new Question();
+                sideA.setText(question.getLeft());
+                sideB.setText(question.getRight());
             }
         });
         button_flag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                question = deck.pickAQuestion();
-//                sideA.setText(question.getLeft());
-//                sideB.setText(question.getRight());
+                question = new Question();
+                sideA.setText(question.getLeft());
+                sideB.setText(question.getRight());
             }
         });
 

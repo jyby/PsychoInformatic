@@ -12,6 +12,31 @@ public class Question {
     Boolean expectedCorrectness;
     public final Random rand = new Random();
 
+    public Question() {
+        int x = rand.nextInt(10);
+        int y = rand.nextInt(10);
+        expectedCorrectness = rand.nextBoolean();
+        if (expectedCorrectness) {
+            this.left = Integer.toString(x) + "*" + Integer.toString(y);
+            this.right = Integer.toString(x * y);
+        } else {
+            int r = rand.nextInt(3);
+            if (r == 0) {
+                this.left = Integer.toString(x+1) + "*" + Integer.toString(y);
+                this.right = Integer.toString(x * y);
+            } else if (r == 1) {
+                this.left = Integer.toString(x) + "*" + Integer.toString(y+1);
+                this.right = Integer.toString(x * y);
+            } else if (r == 2) {
+                this.left = Integer.toString(x) + "*" + Integer.toString(y);
+                this.right = Integer.toString((x+1) * y);
+            } else if (r == 3) {
+                this.left = Integer.toString(x) + "*" + Integer.toString(y);
+                this.right = Integer.toString(x * (y+1));
+            }
+        }
+    }
+
     public Question(String left, String right, Boolean b) {
         this.left = left;
         this.right = right;
