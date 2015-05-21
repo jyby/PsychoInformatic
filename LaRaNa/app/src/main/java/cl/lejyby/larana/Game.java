@@ -9,11 +9,18 @@ import android.widget.Button;
 import android.view.View;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class Game extends ActionBarActivity {
 
 //    Deck deck;
     Question question;
     public final Random rand = new Random();
+
+    final void displayCards(Question question, TextView sideA, TextView sideB ) {
+        sideA.setText(question.getLeft());
+        sideB.setText(question.getRight());
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,38 +36,34 @@ public class Game extends ActionBarActivity {
 
 //        this.deck = new Deck();
         question = new Question();
+        displayCards(question,sideA,sideB);
 
         button_joker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                question = deck.pickAQuestion();
                 question = new Question();
-                sideA.setText(question.getLeft());
-                sideB.setText(question.getRight());
+                displayCards(question,sideA,sideB);
             }
         });
         button_reject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 question = new Question();
-                sideA.setText(question.getLeft());
-                sideB.setText(question.getRight());
           }
         });
         button_validate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 question = new Question();
-                sideA.setText(question.getLeft());
-                sideB.setText(question.getRight());
+                displayCards(question,sideA,sideB);
             }
         });
         button_flag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 question = new Question();
-                sideA.setText(question.getLeft());
-                sideB.setText(question.getRight());
+                displayCards(question,sideA,sideB);
             }
         });
 
