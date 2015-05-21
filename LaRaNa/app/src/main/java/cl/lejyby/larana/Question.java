@@ -11,16 +11,21 @@ public class Question {
     String right;
     Boolean expectedCorrectness;
     public final Random rand = new Random();
+    final int x_min = 5;
+    final int x_max = 9;
+    final int y_min = 5;
+    final int y_max = 9;
+
 
     public Question() {
-        int x = rand.nextInt(10);
-        int y = rand.nextInt(10);
+        int x = x_min + rand.nextInt(x_max-x_min);
+        int y = y_min + rand.nextInt(y_max-y_min);
         expectedCorrectness = rand.nextBoolean();
         if (expectedCorrectness) {
             this.left = Integer.toString(x) + "*" + Integer.toString(y);
             this.right = Integer.toString(x * y);
         } else {
-            int r = rand.nextInt(3);
+            int r = rand.nextInt(4);
             if (r == 0) {
                 this.left = Integer.toString(x+1) + "*" + Integer.toString(y);
                 this.right = Integer.toString(x * y);
@@ -36,6 +41,10 @@ public class Question {
             }
         }
     }
+
+//    public Question() {
+//        this(new FlashCard(), new FlashCard());
+//    }
 
     public Question(String left, String right, Boolean b) {
         this.left = left;

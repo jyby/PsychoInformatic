@@ -1,18 +1,22 @@
 package cl.lejyby.larana;
 import java.util.Random;
 
-/**
+/** FlashCard: structure for a flashcard with multiple faces.
  * Created by jbarbay on 11/05/15.
  */
 public class FlashCard {
     private int id;
     private String[] face;
     public final Random rand = new Random();
+    final int x_min = 5;
+    final int x_max = 9;
+    final int y_min = 5;
+    final int y_max = 9;
 
     public FlashCard() {
         this.face = new String[2];
-        int x = rand.nextInt(10);
-        int y = rand.nextInt(10);
+        int x = x_min + rand.nextInt(x_max-x_min);
+        int y = y_min + rand.nextInt(y_max-y_min);
         this.face[0] = Integer.toString(x)+"*"+Integer.toString(y);
         this.face[1] = Integer.toString(x*y);
     }
