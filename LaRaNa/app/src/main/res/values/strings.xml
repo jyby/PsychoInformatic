@@ -8,10 +8,10 @@
     <string name="button_reject">Reject</string>
     <string name="button_flag">Flag</string>
     <string name="button_joker">Joker</string>
-    <string name="text_true_negative">True \nNegatives</string>
-    <string name="text_true_positive">True \nPositives</string>
-    <string name="text_false_negative">False \nNegatives</string>
-    <string name="text_false_positive">False \nPositives</string>
+    <string name="text_true_negative">True \nNeg</string>
+    <string name="text_true_positive">True \nPos</string>
+    <string name="text_false_negative">False \nNeg</string>
+    <string name="text_false_positive">False \nPos</string>
     <string name="counter_true_negative">0</string>
     <string name="counter_true_positive">0</string>
     <string name="counter_false_negative">0</string>
