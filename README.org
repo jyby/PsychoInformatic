@@ -9,6 +9,74 @@
 For more information, see the file:proposal.org.
 
 
+* Random Ideas:
+** BUSINESS model
+  :CLOCK:
+  CLOCK: [2015-05-19 Tue 11:25]--[2015-05-19 Tue 11:30] =>  0:05
+  :END:
+  :LOGBOOK:
+  - State "ACTF"       from "TODO"       [2015-05-19 Tue 11:25]
+  :END:
+  + FREE Application
+    - imposes to user (beta testers) an arbitrary
+      1. game interface 
+      2. Spaced Retrieval algorithm
+      3. potentially erroneous game data
+    - sends back usability information to server
+  + PAID FOR application
+    - give an informed choice (with statistics from free application) for
+      1. game interface 
+      2. Spaced Retrieval algorithm
+      3. potentially erroneous game data
+    - insures privacy of the usage data.
+** 3rd face of Flashcard yields a comment
+  :CLOCK:
+  CLOCK: [2015-05-23 Sat 09:18]--[2015-05-23 Sat 09:36] =>  0:18
+  CLOCK: [2015-05-23 Sat 09:08]--[2015-05-23 Sat 09:17] =>  0:09
+  :END:
+  :LOGBOOK:
+  - State "ACTF"       from ""           [2015-05-23 Sat 09:18]
+  - State "ACTF"       from "TODO"       [2015-05-23 Sat 09:08]
+  :END:
+[2015-05-23 Sat 09:08]
+ - In the case of multiplication (e.g. "3*6", "18"), the third face of the Flashcard could be an array of 3 by 6 with each square numbered, such as:
+   |  1 |  2 |  3 |  4 |  5 |  6 |
+   |  7 |  8 |  9 | 10 | 11 | 12 |
+   | 13 | 14 | 15 | 16 | 17 | 18 |
+ - In the case of vocabulary, it can be an image illustrating the word.
+
+
+* LIST Potential names for Pedagogical game series
+  :CLOCK:
+  CLOCK: [2015-05-23 Sat 08:24]--[2015-05-23 Sat 08:51] =>  0:27
+  :END:
+  :LOGBOOK:
+  - State "ACTF"       from "TODO"       [2015-05-23 Sat 08:24]
+  :END:
+ The idea would be to design, implement and publish a sequence of simple games, starting from the same template, each teaching a distinct topic, but each having a name following the same theme. I list here some ideas of names (brainstorming):
+
+  - [ ] LaRaNa : (Theme) 
+    - LRN are the consonants of "LeaRN"
+    - "La Rana" means "The Frog" in Spanish
+  - My nickname is JyBy, hence the following proposals:
+  - [ ] JyByLand : (Theme)
+  - [ ] JyBy University : (Theme)
+  - [ ] JyBySchool : (Theme)
+  - I would like to use a character of mine named "TNT", and in particular a drawing of mine showing TNT dreaming.
+  - [ ] TNT University : (Theme)
+  - [ ] TNT's School : (Theme)
+  - One theme I like is the idea that the games happen in a "dream world". 
+  - [ ] The Dream School : (Theme)
+  - [ ] The School of Dreams : (Theme)
+  - [ ] TSoD: School of Dreams : (Theme)
+  - [ ] DU (Dream University) - (Theme)
+    - Menu shows TNT Dreaming about the video games
+* LIST Ideas of Games for Pedagogical game series
+  All games receive knowledge through pedagogical videos and flashcards, but can test this knowledge in various (ludical) ways. Here are some ideas of how it could be implemented:
+
+    * Match and Reject :: Chimera are labeled with sides of flashcards and come by two. For each pair, you must decide if they are compatible or not, based on their flashcards. If they are compatible, you are rewarded with a drawing of them as a happy couple, showing the two flashcards side by side. If they are not, you are shown them hiting each other with the flashcards, displaying "as if by mistake" the other sides of each flash cards.  
+    * Match 1 among 4 :: characters arrive to the old wizard with questions (e.g. "4*6"), who gives out answers (e.g. "24"). You are the assistant of the wizard, who hand to you a pile with the answers. The four Characters in front of the house talk all at the same time, and you must decide to which character to handle which answer. (Similar to the tank game but more pacific.)
+    * Memory :: You are shown an array of back of cards all identical and offered to click on two of them, displaying their other faces. You win one point and the cards are removed if they are compatible (matching sides of the same flashcard). [Optional: An oponent is playing against you and trying to grab more cards than you!] 
 * Milestones
 
 ** Simple App teaching Multiplication Tables [66%]
