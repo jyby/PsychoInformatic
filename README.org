@@ -7,3 +7,23 @@
   The aim of the <<<Psycho Informatic>>> project is to produce generic examples of pedagogical applications for mobile devices, to be used to study the effect of various features on both persistence and learning. 
 
 For more information, see the file:proposal.org.
+
+
+* Milestones
+
+** Simple App teaching Multiplication Tables [66%]
+   - [X] Display two flashcards sides
+   - [X] Generate random questions 
+   - [X] Implement button Reject/Match/Joker and
+   - [X] Implement scores of {true,false}.{positive,negative} answers
+   - [ ] Display correct anwers after learner answered
+   - [ ] Refactor code
+
+** Simple App managing (Multiplication) FlashCards [0%]
+
+   - [ ] Generate two random Multiplication Flashcards, and a question from it
+   - [ ] Generate a deck of all $n(n-1)$ possible flashcards for multiplications
+   - [ ] Manage data about past successes and failures on the $4n^2(n-1)^2$ possible questions
+
+** Simple App managing Other types of FlashCards []
+   - [ ] Check how Anki Droid manage flashcards, and in particular graphic and sound flashcards. 
