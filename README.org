@@ -46,6 +46,17 @@ For more information, see the file:proposal.org.
  - In the case of vocabulary, it can be an image illustrating the word.
 
 
+* Hypothesis to test
+** People learn better with (your favorite) spaced retrival algorithm
+** Dislexic (and maybe general people) can learn better with colored cards for words  
+Dislexic people can still still benefit from spaced retrieval in order to learn the vocabulary of a foreign language, using multi-sensorial flashcards
+
+The same games can be designed, it requires only special sets of flashcards so that the learner matches drawings, pictures with sounds and flashcards with words, using colors to help learning the gender of names (masculine blue, feminine pink, neutral grey), the various declinations of a word (from nominative to locative, the colors of the rainbow).
+** People play longer when the game fakes a social objective
+   - Social objective such as "help the wizard to answer the questions from his neighbors", albeit obviously fake in such a game, has an effect on learners as opposed to a mechanical game.
+** People play longer with fragmented levels as opposed to an infinite game
+   - People play longer if they know that they lack "only x answers" to finish a level, as opposed to an infinite game which ends only by failing or only when they decide.
+** People play more regularly if they are put in competitions with friends, by comparing their scores on related applications with friends on the internet, as opposed to scores from unknown people, and as opposed as not showing any competiting socres.
 * LIST Potential names for Pedagogical game series
   :CLOCK:
   CLOCK: [2015-05-23 Sat 08:24]--[2015-05-23 Sat 08:51] =>  0:27
@@ -65,12 +76,14 @@ For more information, see the file:proposal.org.
   - I would like to use a character of mine named "TNT", and in particular a drawing of mine showing TNT dreaming.
   - [ ] TNT University : (Theme)
   - [ ] TNT's School : (Theme)
+  - [ ] TNT dreams of (Theme)
   - One theme I like is the idea that the games happen in a "dream world". 
   - [ ] The Dream School : (Theme)
   - [ ] The School of Dreams : (Theme)
   - [ ] TSoD: School of Dreams : (Theme)
   - [ ] DU (Dream University) - (Theme)
     - Menu shows TNT Dreaming about the video games
+
 * LIST Ideas of Games for Pedagogical game series
   All games receive knowledge through pedagogical videos and flashcards, but can test this knowledge in various (ludical) ways. Here are some ideas of how it could be implemented:
 
@@ -78,7 +91,6 @@ For more information, see the file:proposal.org.
     * Match 1 among 4 :: characters arrive to the old wizard with questions (e.g. "4*6"), who gives out answers (e.g. "24"). You are the assistant of the wizard, who hand to you a pile with the answers. The four Characters in front of the house talk all at the same time, and you must decide to which character to handle which answer. (Similar to the tank game but more pacific.)
     * Memory :: You are shown an array of back of cards all identical and offered to click on two of them, displaying their other faces. You win one point and the cards are removed if they are compatible (matching sides of the same flashcard). [Optional: An oponent is playing against you and trying to grab more cards than you!] 
     * Blind :: You are blind, but you can still learn the vocabulary of foreign languages using flashcards matching sounds! Hear one word in language A, and 2 words in language B, choose which ones are associated with the first (none, first, second or both).
-    * Dislexic :: You are dislexic, but you can still still benefit from spaced retrieval in order to learn the vocabulary of a foreign language, using multi-sensorial flashcards! Match drawings, pictures with sounds and flashcards with words, using colors to help learning the gender of names (masculine blue, feminine pink, neutral grey), the various declinations of a word (from nominative to locative, the colors of the rainbow). 
 
 * Milestones
 
