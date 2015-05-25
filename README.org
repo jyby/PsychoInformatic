@@ -73,11 +73,23 @@ For more information, see the file:proposal.org.
 
 
 * Hypothesis to test
+** People learn better and play longer and more regularly if the game interface presents only positive reinforcement, as opposed to a game interface with "FAIL" or "-1!" messages.
+#+BEGIN_QUOTE
+The field of second language acquisition has historically blamed language learning failure on a number of factors. Anxiety in the foreign language classroom (anxiety about making mistakes in grammar and pronunciation, about understanding the teacher, about remembering vocabulary) has been prominent as a purported cause of the failure. 
+http://www.ldonline.org/article/6065/
+#+END_QUOTE
 ** People learn better with (your favorite) spaced retrival algorithm
 ** Dislexic (and maybe general people) can learn better with colored cards for words  
 Dislexic people can still still benefit from spaced retrieval in order to learn the vocabulary of a foreign language, using multi-sensorial flashcards
 
 The same games can be designed, it requires only special sets of flashcards so that the learner matches drawings, pictures with sounds and flashcards with words, using colors to help learning the gender of names (masculine blue, feminine pink, neutral grey), the various declinations of a word (from nominative to locative, the colors of the rainbow).
+
+#+BEGIN_QUOTE
+Dyslexic pupils learning a foreign language have to be aware that it may be a longer process for them than for others. It is also important to consider the suitability of different languages.
+http://www.bdadyslexia.org.uk/educator/modern-foreign-languages
+#+END_QUOTE
+
+
 ** People play longer when the game fakes a social objective
    - Social objective such as "help the wizard to answer the questions from his neighbors", albeit obviously fake in such a game, has an effect on learners as opposed to a mechanical game.
 ** People play longer with fragmented levels as opposed to an infinite game
