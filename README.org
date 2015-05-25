@@ -9,6 +9,25 @@
 For more information, see the file:proposal.org.
 
 
+* Milestones
+
+** Simple App teaching Multiplication Tables [66%]
+   - [X] Display two flashcards sides
+   - [X] Generate random questions 
+   - [X] Implement button Reject/Match/Joker and
+   - [X] Implement scores of {true,false}.{positive,negative} answers
+   - [ ] Display correct anwers after learner answered
+   - [ ] Refactor code
+
+** Simple App managing (Multiplication) FlashCards [0%]
+
+   - [ ] Generate two random Multiplication Flashcards, and a question from it
+   - [ ] Generate a deck of all $n(n-1)$ possible flashcards for multiplications
+   - [ ] Manage data about past successes and failures on the $4n^2(n-1)^2$ possible questions
+
+** Simple App managing Other types of FlashCards []
+   - [ ] Check how Anki Droid manage flashcards, and in particular graphic and sound flashcards. 
+
 * Random Ideas:
 ** BUSINESS model
   :CLOCK:
@@ -29,7 +48,7 @@ For more information, see the file:proposal.org.
       2. Spaced Retrieval algorithm
       3. potentially erroneous game data
     - insures privacy of the usage data.
-** 3rd face of Flashcard yields a comment
+** A digital flashcard is not limited to two sides 
   :CLOCK:
   CLOCK: [2015-05-23 Sat 09:18]--[2015-05-23 Sat 09:36] =>  0:18
   CLOCK: [2015-05-23 Sat 09:08]--[2015-05-23 Sat 09:17] =>  0:09
@@ -43,7 +62,14 @@ For more information, see the file:proposal.org.
    |  1 |  2 |  3 |  4 |  5 |  6 |
    |  7 |  8 |  9 | 10 | 11 | 12 |
    | 13 | 14 | 15 | 16 | 17 | 18 |
- - In the case of vocabulary, it can be an image illustrating the word.
+ - In the case of vocabulary (e.g. English to Spanish), it can be an image illustrating the word, or a sound illustrating its pronunciation in each language.
+** Users can be asked to provide information to add to flashcards
+   Examples:
+   - Users can be asked to read out loud the word on a flashcard, so that the sounds forms a proposal for an additional sound, which will be validated by the game interface with other users (Many to Many teaching model).
+** Games gather new information on each flashcards, which can be summarized on additional sides of the flashcard 
+   Examples: 
+   - false friends (Cards which are often mismatched with this particular one)
+   - synonymous (other Cards from the deck which CAN be matched with this particular one, in some contect)
 
 
 * Hypothesis to test
@@ -57,6 +83,8 @@ The same games can be designed, it requires only special sets of flashcards so t
 ** People play longer with fragmented levels as opposed to an infinite game
    - People play longer if they know that they lack "only x answers" to finish a level, as opposed to an infinite game which ends only by failing or only when they decide.
 ** People play more regularly if they are put in competitions with friends, by comparing their scores on related applications with friends on the internet, as opposed to scores from unknown people, and as opposed as not showing any competiting socres.
+** Blind people can  still benefit spaced retrieval to learn, using flashcards featuring only sounds, and non-visual game interfaces, such as those inspired by "Rosetta Stone" games.
+
 * LIST Potential names for Pedagogical game series
   :CLOCK:
   CLOCK: [2015-05-23 Sat 08:24]--[2015-05-23 Sat 08:51] =>  0:27
@@ -90,23 +118,4 @@ The same games can be designed, it requires only special sets of flashcards so t
     * Match and Reject :: Chimera are labeled with sides of flashcards and come by two. For each pair, you must decide if they are compatible or not, based on their flashcards. If they are compatible, you are rewarded with a drawing of them as a happy couple, showing the two flashcards side by side. If they are not, you are shown them hiting each other with the flashcards, displaying "as if by mistake" the other sides of each flash cards.  
     * Match 1 among 4 :: characters arrive to the old wizard with questions (e.g. "4*6"), who gives out answers (e.g. "24"). You are the assistant of the wizard, who hand to you a pile with the answers. The four Characters in front of the house talk all at the same time, and you must decide to which character to handle which answer. (Similar to the tank game but more pacific.)
     * Memory :: You are shown an array of back of cards all identical and offered to click on two of them, displaying their other faces. You win one point and the cards are removed if they are compatible (matching sides of the same flashcard). [Optional: An oponent is playing against you and trying to grab more cards than you!] 
-    * Blind :: You are blind, but you can still learn the vocabulary of foreign languages using flashcards matching sounds! Hear one word in language A, and 2 words in language B, choose which ones are associated with the first (none, first, second or both).
-
-* Milestones
-
-** Simple App teaching Multiplication Tables [66%]
-   - [X] Display two flashcards sides
-   - [X] Generate random questions 
-   - [X] Implement button Reject/Match/Joker and
-   - [X] Implement scores of {true,false}.{positive,negative} answers
-   - [ ] Display correct anwers after learner answered
-   - [ ] Refactor code
-
-** Simple App managing (Multiplication) FlashCards [0%]
-
-   - [ ] Generate two random Multiplication Flashcards, and a question from it
-   - [ ] Generate a deck of all $n(n-1)$ possible flashcards for multiplications
-   - [ ] Manage data about past successes and failures on the $4n^2(n-1)^2$ possible questions
-
-** Simple App managing Other types of FlashCards []
-   - [ ] Check how Anki Droid manage flashcards, and in particular graphic and sound flashcards. 
+    * Rosetta Stone :: Hear one word in language A, and 2 words in language B, choose which ones are associated with the first (none, first, second or both).
